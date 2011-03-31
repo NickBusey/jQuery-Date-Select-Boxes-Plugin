@@ -24,7 +24,6 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 	{
 		$.fn.dateSelectBoxes = function(monthElem, dayElem, yearElem, keepDayLabel)
 			{
-				console.debug(dayElem.val());
 				if (keepDayLabel) {
 					var dayLabel = dayElem.val();
 				}
