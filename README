@@ -2,6 +2,4 @@ A simple way to implement smart date select boxes. Given month, day, and year se
 
 Requires jQuery Select Box Manipulation plugin ( http://www.texotela.co.uk/code/jquery/select/ ).
 
-Usage: $().ready(function () { $().dateSelectBoxes(‘birthMonth’,'birthDay’,'birthYear’); });
-
-Where ‘birthMonth’, ‘birthDay’, and ‘birthYear’ are the IDs of select boxes.
+Usage: $().dateSelectBoxes($('#birthMonth'),$('#birthDay'),$('#birthYear'));

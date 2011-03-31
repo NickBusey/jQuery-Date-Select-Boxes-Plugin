@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  *
- * Version 1.1.0
+ * Version 1.1.1
  * 
  */
 (function($)
@@ -26,14 +26,14 @@
 					"31" : "31"
 				};
 				function isLeapYear() {
-					var selected = $("#"+year).selectedValues();
+					var selected = $(year).selectedValues();
 					return ( selected == "" || ( ( selected % 4 == 0 ) && ( selected % 100 != 0 ) ) || ( selected % 400 == 0) );
 				}
 				function updateDays() {
-					var selected = $("#"+day).selectedValues();
-					$("#"+day).removeOption(/./);
+					var selected = $(day).selectedValues();
+					$(day).removeOption(/./);
 					var days = {};
-					switch (parseInt($("#"+month).val())) {
+					switch (parseInt($(month).val())) {
 						case 1:
 						case 3:
 						case 5:
@@ -68,13 +68,13 @@
 							}
 						break;
 					}
-					$("#"+day).addOption(days, false);
-					$("#"+day).selectOptions(selected);
+					$(day).addOption(days, false);
+					$(day).selectOptions(selected);
 				}
-				$("#"+year).change( function() {
+				$(year).change( function() {
 					updateDays();
 				});
-				$("#"+month).change( function() {
+				$(month).change( function() {
 					updateDays();
 				});
 			};
