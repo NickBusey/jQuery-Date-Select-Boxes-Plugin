@@ -2,4 +2,6 @@ A simple way to implement smart date select boxes. Given month, day, and year se
 
 Includes and uses jQuery Select Box Manipulation plugin ( http://www.texotela.co.uk/code/jquery/select/ ).
 
-Usage: $().dateSelectBoxes($('#birthMonth'),$('#birthDay'),$('#birthYear'));
+Usage: $().dateSelectBoxes($('#birthMonth'),$('#birthDay'),$('#birthYear'), keepDayLabel);
+
+Where keepDayLabel is a boolean to say whether or not you want to preserve the first element in the select (e.g., a value-less, descriptive option used as a label (e.g., 'day'))

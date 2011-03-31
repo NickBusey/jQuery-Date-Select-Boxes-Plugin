@@ -22,8 +22,12 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
  */
 (function($)
 	{
-		$.fn.dateSelectBoxes = function(month, day, year)
+		$.fn.dateSelectBoxes = function(monthElem, dayElem, yearElem, keepDayLabel)
 			{
+				console.debug(dayElem.val());
+				if (keepDayLabel) {
+					var dayLabel = dayElem.val();
+				}
 				var allDays = 
 				{
 					"1" : "1", "2" : "2", "3" : "3",
@@ -39,13 +43,18 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 					"31" : "31"
 				};
 				function isLeapYear() {
-					var selected = $(year).selectedValues();
+					var selected = yearElem.selectedValues();
 					return ( selected === "" || ( ( selected % 4 === 0 ) && ( selected % 100 !== 0 ) ) || ( selected % 400 === 0) );
 				}
 				function updateDays() {
-					var selected = $(day).selectedValues(), days = {}, i;
-					$(day).removeOption(/./);
-					switch (parseInt($(month).val(), 10)) {
+					var selected = dayElem.selectedValues(), days = [], i;
+					dayElem.removeOption(/./);
+					var month = parseInt(monthElem.val(),10);
+					if (!month) {
+						//Default to 31 days if no month selected.
+						month = 1;
+					}
+					switch (month) {
 						case 1:
 						case 3:
 						case 5:
@@ -80,13 +89,16 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 							}
 						break;
 					}
-					$(day).addOption(days, false);
-					$(day).selectOptions(selected);
+					if (dayLabel) {
+						days.unshift(dayLabel);
+					}
+					dayElem.addOption(days, false);
+					dayElem.selectOptions(selected);
 				}
-				$(year).change( function() {
+				yearElem.change( function() {
 					updateDays();
 				});
-				$(month).change( function() {
+				monthElem.change( function() {
 					updateDays();
 				});
 			};
