@@ -20,9 +20,9 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
  * Demo: http://nickabusey.com/jquery-date-select-boxes-plugin/
  * 
  */
-(function($)
+(function(jQuery)
 	{
-		$.fn.dateSelectBoxes = function(monthElem, dayElem, yearElem, keepDayLabel)
+		jQuery.fn.dateSelectBoxes = function(monthElem, dayElem, yearElem, keepDayLabel)
 			{
 				if (keepDayLabel) {
 					var dayLabel = dayElem.val();
