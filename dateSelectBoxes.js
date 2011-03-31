@@ -1,24 +1,25 @@
 /*
  *
- * Copyright (c) 2006-2009 Sam Collett (http://www.texotela.co.uk)
+ * Copyright (c) 2006-2008 Sam Collett (http://www.texotela.co.uk)
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  *
  * Version 2.2.4
  * Demo: http://www.texotela.co.uk/code/jquery/select/
  *
- * $LastChangedDate: 2009-02-08 00:28:12 +0000 (Sun, 08 Feb 2009) $ 
- * $Rev: 6185 $
+ * $LastChangedDate: 2008-06-17 17:27:25 +0100 (Tue, 17 Jun 2008) $
+ * $Rev: 5727 $
  *
  */
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}(';(6($){$.u.N=6(){5 j=6(a,v,t,b,c){5 d=11.12("U");d.p=v,d.H=t;5 o=a.z;5 e=o.q;3(!a.A){a.A={};x(5 i=0;i<e;i++){a.A[o[i].p]=i}}3(c||c==0){5 f=d;x(5 g=c;g<=e;g++){5 h=a.z[g];a.z[g]=f;o[g]=f;a.A[o[g].p]=g;f=h}}3(9 a.A[v]=="V")a.A[v]=e;a.z[a.A[v]]=d;3(b){d.s=8}};5 a=W;3(a.q==0)7 4;5 k=8;5 m=B;5 l,v,t;3(9(a[0])=="D"){m=8;l=a[0]}3(a.q>=2){3(9(a[1])=="O"){k=a[1];E=a[2]}n 3(9(a[2])=="O"){k=a[2];E=a[1]}n{E=a[1]}3(!m){v=a[0];t=a[1]}}4.y(6(){3(4.F.C()!="G")7;3(m){x(5 a 13 l){j(4,a,l[a],k,E);E+=1}}n{j(4,v,t,k,E)}});7 4};$.u.14=6(b,c,d,e,f){3(9(b)!="J")7 4;3(9(c)!="D")c={};3(9(d)!="O")d=8;4.y(6(){5 a=4;$.15(b,c,6(r){$(a).N(r,d);3(9 e=="6"){3(9 f=="D"){e.16(a,f)}n{e.P(a)}}})});7 4};$.u.X=6(){5 a=W;3(a.q==0)7 4;5 d=9(a[0]);5 v,K;3(d=="J"||d=="D"||d=="6"){v=a[0];3(v.I==Y){5 l=v.q;x(5 i=0;i<l;i++){4.X(v[i],a[1])}7 4}}n 3(d=="17")K=a[0];n 7 4;4.y(6(){3(4.F.C()!="G")7;3(4.A)4.A=Z;5 b=B;5 o=4.z;3(!!v){5 c=o.q;x(5 i=c-1;i>=0;i--){3(v.I==Q){3(o[i].p.R(v)){b=8}}n 3(o[i].p==v){b=8}3(b&&a[1]===8)b=o[i].s;3(b){o[i]=Z}b=B}}n{3(a[1]===8){b=o[K].s}n{b=8}3(b){4.18(K)}}});7 4};$.u.19=6(f){5 g=$(4).10();5 a=9(f)=="V"?8:!!f;4.y(6(){3(4.F.C()!="G")7;5 o=4.z;5 d=o.q;5 e=[];x(5 i=0;i<d;i++){e[i]={v:o[i].p,t:o[i].H}}e.1a(6(b,c){L=b.t.C(),M=c.t.C();3(L==M)7 0;3(a){7 L<M?-1:1}n{7 L>M?-1:1}});x(5 i=0;i<d;i++){o[i].H=e[i].t;o[i].p=e[i].v}}).S(g,8);7 4};$.u.S=6(b,d){5 v=b;5 e=9(b);3(e=="D"&&v.I==Y){5 f=4;$.y(v,6(){f.S(4,d)})};5 c=d||B;3(e!="J"&&e!="6"&&e!="D")7 4;4.y(6(){3(4.F.C()!="G")7 4;5 o=4.z;5 a=o.q;x(5 i=0;i<a;i++){3(v.I==Q){3(o[i].p.R(v)){o[i].s=8}n 3(c){o[i].s=B}}n{3(o[i].p==v){o[i].s=8}n 3(c){o[i].s=B}}}});7 4};$.u.1b=6(b,c){5 w=c||"s";3($(b).1c()==0)7 4;4.y(6(){3(4.F.C()!="G")7 4;5 o=4.z;5 a=o.q;x(5 i=0;i<a;i++){3(w=="1d"||(w=="s"&&o[i].s)){$(b).N(o[i].p,o[i].H)}}});7 4};$.u.1e=6(b,c){5 d=B;5 v=b;5 e=9(v);5 f=9(c);3(e!="J"&&e!="6"&&e!="D")7 f=="6"?4:d;4.y(6(){3(4.F.C()!="G")7 4;3(d&&f!="6")7 B;5 o=4.z;5 a=o.q;x(5 i=0;i<a;i++){3(v.I==Q){3(o[i].p.R(v)){d=8;3(f=="6")c.P(o[i],i)}}n{3(o[i].p==v){d=8;3(f=="6")c.P(o[i],i)}}}});7 f=="6"?4:d};$.u.10=6(){5 v=[];4.T().y(6(){v[v.q]=4.p});7 v};$.u.1f=6(){5 t=[];4.T().y(6(){t[t.q]=4.H});7 t};$.u.T=6(){7 4.1g("U:s")}})(1h);',62,80,'|||if|this|var|function|return|true|typeof||||||||||||||else||value|length||selected||fn|||for|each|options|cache|false|toLowerCase|object|startindex|nodeName|select|text|constructor|string|index|o1t|o2t|addOption|boolean|call|RegExp|match|selectOptions|selectedOptions|option|undefined|arguments|removeOption|Array|null|selectedValues|document|createElement|in|ajaxAddOption|getJSON|apply|number|remove|sortOptions|sort|copyOptions|size|all|containsOption|selectedTexts|find|jQuery'.split('|'),0,{}));
+(function(i){i.b.e=function(){function b(a,l,m,p,j){var n=document.createElement("option");n.value=l;n.text=m;m=a.options;var o=m.length;if(!a.c){a.c={};for(var k=0;k<o;k++)a.c[m[k].value]=k}if(j||j==0){k=n;for(j=j;j<=o;j++){var q=a.options[j];a.options[j]=k;m[j]=k;a.c[m[j].value]=j;k=q}}if(typeof a.c[l]=="undefined")a.c[l]=o;a.options[a.c[l]]=n;if(p)n.selected=true}var d=arguments;if(d.length==0)return this;var e=true,f=false,h,c,g;if(typeof d[0]=="object"){f=true;h=d[0]}if(d.length>=2){if(typeof d[1]== "boolean"){e=d[1];startindex=d[2]}else{if(typeof d[2]=="boolean")e=d[2];startindex=d[1]}if(!f){c=d[0];g=d[1]}}this.a(function(){if(this.nodeName.toLowerCase()=="select")if(f)for(var a in h){b(this,a,h[a],e,startindex);startindex+=1}else b(this,c,g,e,startindex)});return this};i.b.k=function(b,d,e,f,h){if(typeof b!="string")return this;if(typeof d!="object")d={};if(typeof e!="boolean")e=true;this.a(function(){var c=this;i.n(b,d,function(g){i(c).e(g,e);if(typeof f=="function")typeof h=="object"?f.apply(c, h):f.call(c)})});return this};i.b.h=function(){var b=arguments;if(b.length==0)return this;var d=typeof b[0],e,f;if(d=="string"||d=="object"||d=="function"){e=b[0];if(e.constructor==Array){d=e.length;for(var h=0;h<d;h++)this.h(e[h],b[1]);return this}}else if(d=="number")f=b[0];else return this;this.a(function(){if(this.nodeName.toLowerCase()=="select"){if(this.c)this.c=null;var c=false,g=this.options;if(e)for(var a=g.length-1;a>=0;a--){if(e.constructor==RegExp){if(g[a].value.match(e))c=true}else if(g[a].value== e)c=true;if(c&&b[1]===true)c=g[a].selected;if(c)g[a]=null;c=false}else(c=b[1]===true?g[f].selected:true)&&this.remove(f)}});return this};i.b.p=function(b){var d=i(this).i(),e=typeof b=="undefined"?true:!!b;this.a(function(){if(this.nodeName.toLowerCase()=="select"){for(var f=this.options,h=f.length,c=[],g=0;g<h;g++)c[g]={j:f[g].value,d:f[g].text};c.sort(function(a,l){o1t=a.d.toLowerCase();o2t=l.d.toLowerCase();if(o1t==o2t)return 0;return e?o1t<o2t?-1:1:o1t>o2t?-1:1});for(g=0;g<h;g++){f[g].text=c[g].d; f[g].value=c[g].j}}}).f(d,true);return this};i.b.f=function(b,d){var e=typeof b;if(e=="object"&&b.constructor==Array){var f=this;i.a(b,function(){f.f(this,d)})}var h=d||false;if(e!="string"&&e!="function"&&e!="object")return this;this.a(function(){if(this.nodeName.toLowerCase()!="select")return this;for(var c=this.options,g=c.length,a=0;a<g;a++)if(b.constructor==RegExp)if(c[a].value.match(b))c[a].selected=true;else{if(h)c[a].selected=false}else if(c[a].value==b)c[a].selected=true;else if(h)c[a].selected= false});return this};i.b.m=function(b,d){var e=d||"selected";if(i(b).size()==0)return this;this.a(function(){if(this.nodeName.toLowerCase()!="select")return this;for(var f=this.options,h=f.length,c=0;c<h;c++)if(e=="all"||e=="selected"&&f[c].selected)i(b).e(f[c].value,f[c].text)});return this};i.b.l=function(b,d){var e=false,f=typeof b,h=typeof d;if(f!="string"&&f!="function"&&f!="object")return h=="function"?this:e;this.a(function(){if(this.nodeName.toLowerCase()!="select")return this;if(e&&h!="function")return false; for(var c=this.options,g=c.length,a=0;a<g;a++)if(b.constructor==RegExp){if(c[a].value.match(b)){e=true;h=="function"&&d.call(c[a],a)}}else if(c[a].value==b){e=true;h=="function"&&d.call(c[a],a)}});return h=="function"?this:e};i.b.i=function(){var b=[];this.g().a(function(){b[b.length]=this.value});return b};i.b.o=function(){var b=[];this.g().a(function(){b[b.length]=this.text});return b};i.b.g=function(){return this.find("option:selected")}})(jQuery);
 /*
  *
- * Copyright (c) 2010 Nick Busey (http://nickabusey.com/)
+ * Copyright (c) 2010-2011 Nick Busey (http://nickabusey.com/)
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  *
  * Version 1.1.2
+ * Demo: http://nickabusey.com/jquery-date-select-boxes-plugin/
  * 
  */
 (function($)
@@ -41,13 +42,12 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 				};
 				function isLeapYear() {
 					var selected = $(year).selectedValues();
-					return ( selected == "" || ( ( selected % 4 == 0 ) && ( selected % 100 != 0 ) ) || ( selected % 400 == 0) );
+					return ( selected === "" || ( ( selected % 4 === 0 ) && ( selected % 100 !== 0 ) ) || ( selected % 400 === 0) );
 				}
 				function updateDays() {
-					var selected = $(day).selectedValues();
+					var selected = $(day).selectedValues(), days = {}, i;
 					$(day).removeOption(/./);
-					var days = {};
-					switch (parseInt($(month).val())) {
+					switch (parseInt($(month).val(), 10)) {
 						case 1:
 						case 3:
 						case 5:
@@ -55,21 +55,21 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 						case 8:
 						case 10:
 						case 12:
-						default:
 							for (i=1;i<=31;i++)
 							{
-								days[i]=allDays[i]
+								days[i]=allDays[i];
 							}
 						break;
 						case 2:
 							var febDays = 0;
-							if (isLeapYear())
+							if (isLeapYear()) {
 								febDays = 29;
-							else
+							} else {
 								febDays = 28;
+							}
 							for (i=1;i<=febDays;i++)
 							{
-								days[i]=allDays[i]
+								days[i]=allDays[i];
 							}
 						break;
 						case 4:
@@ -78,7 +78,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 						case 11:
 							for (i=1;i<=30;i++)
 							{
-								days[i]=allDays[i]
+								days[i]=allDays[i];
 							}
 						break;
 					}
@@ -92,4 +92,4 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 					updateDays();
 				});
 			};
-})(jQuery);
+}(jQuery));
