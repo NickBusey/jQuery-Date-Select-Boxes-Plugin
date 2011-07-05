@@ -1,7 +1,9 @@
 A simple way to implement smart date select boxes. Given month, day, and year select boxes, this plugin will automatically populate the day select box with the proper amount of days for a given year and month combination, taking leap years into account.
 
-Includes and uses jQuery Select Box Manipulation plugin ( http://www.texotela.co.uk/code/jquery/select/ ).
+Demo: http://www.nickabusey.com/jquery-date-select-boxes-plugin/
 
 Usage: $().dateSelectBoxes($('#birthMonth'),$('#birthDay'),$('#birthYear'), keepLabels);
 
 Where keepLabels is a boolean you can set to preserve the first element in the select (e.g., a descriptive select option used instead of a separate label element (e.g., 'Day'))
+
+Uses and includes the jQuery Select Box Manipulation plugin http://www.texotela.co.uk/code/jquery/select/
