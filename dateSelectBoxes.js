@@ -16,31 +16,23 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  *
- * Version 1.1.3
+ * Version 1.1.4
  * Demo: http://nickabusey.com/jquery-date-select-boxes-plugin/
  * 
  */
 (function(jQuery)
 	{
-		jQuery.fn.dateSelectBoxes = function(monthElem, dayElem, yearElem, keepDayLabel)
+		jQuery.fn.dateSelectBoxes = function(monthElem, dayElem, yearElem, keepLabels)
 			{
-				if (keepDayLabel) {
+				if (keepLabels) {
 					var dayLabel = dayElem.val();
 				}
-				var allDays = 
-				{
-					"1" : "1", "2" : "2", "3" : "3",
-					"4" : "4", "5" : "5", "6" : "6",
-					"7" : "7", "8" : "8", "9" : "9",
-					"10" : "10", "11" : "11", "12" : "12",
-					"13" : "13", "14" : "14", "15" : "15",
-					"16" : "16", "17" : "17", "18" : "18",
-					"19" : "19", "20" : "20", "21" : "21",
-					"22" : "22", "23" : "23", "24" : "24",
-					"25" : "25", "26" : "26", "27" : "27",
-					"28" : "28", "29" : "29", "30" : "30",
-					"31" : "31"
-				};
+				var allDays = {};
+				for (var ii=1;ii<=31;ii++) {
+					allDays[ii]=ii;
+				}
+				
+				
 				function isLeapYear() {
 					var selected = yearElem.selectedValues();
 					return ( selected === "" || ( ( selected % 4 === 0 ) && ( selected % 100 !== 0 ) ) || ( selected % 400 === 0) );
@@ -61,9 +53,9 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 						case 8:
 						case 10:
 						case 12:
-							for (i=1;i<=31;i++)
+							for (ii=1;ii<=31;ii++)
 							{
-								days[i]=allDays[i];
+								days[ii]=allDays[ii];
 							}
 						break;
 						case 2:
@@ -73,23 +65,23 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 							} else {
 								febDays = 28;
 							}
-							for (i=1;i<=febDays;i++)
+							for (ii=1;ii<=febDays;ii++)
 							{
-								days[i]=allDays[i];
+								days[ii]=allDays[ii];
 							}
 						break;
 						case 4:
 						case 6:
 						case 9:
 						case 11:
-							for (i=1;i<=30;i++)
+							for (ii=1;ii<=30;ii++)
 							{
-								days[i]=allDays[i];
+								days[ii]=allDays[ii];
 							}
 						break;
 					}
 					if (dayLabel) {
-						days.unshift(dayLabel);
+						days[0] = dayLabel;
 					}
 					dayElem.addOption(days, false);
 					dayElem.selectOptions(selected);

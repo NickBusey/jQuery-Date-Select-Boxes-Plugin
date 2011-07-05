@@ -4,4 +4,4 @@ Includes and uses jQuery Select Box Manipulation plugin ( http://www.texotela.co
 
 Usage: $().dateSelectBoxes($('#birthMonth'),$('#birthDay'),$('#birthYear'), keepDayLabel);
 
-Where keepDayLabel is a boolean to say whether or not you want to preserve the first element in the select (e.g., a value-less, descriptive option used as a label (e.g., 'day'))
+Where keepDayLabel is a flag you can pass to preserve the first element in the select (e.g., a value-less, descriptive option used as a label (e.g., 'day'))
