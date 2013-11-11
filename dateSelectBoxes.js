@@ -84,7 +84,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 						days[0] = dayLabel;
 					}
 					dayElem.addOption(days, false);
-					dayElem.selectOptions(selected);
+					dayElem.selectOptions(selected[0]);
 				}
 				yearElem.change( function() {
 					updateDays();
