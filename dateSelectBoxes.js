@@ -39,6 +39,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 				}
 				function updateDays() {
 					var selected = dayElem.selectedValues(), days = [], i;
+
 					dayElem.removeOption(/./);
 					var month = parseInt(monthElem.val(),10);
 					if (!month) {
@@ -85,6 +86,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 					}
 					dayElem.addOption(days, false);
 					dayElem.selectOptions(selected);
+                    dayElem.val(selected);
 				}
 				yearElem.change( function() {
 					updateDays();
