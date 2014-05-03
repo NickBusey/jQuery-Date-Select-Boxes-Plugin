@@ -4,6 +4,8 @@ A simple way to implement smart date select boxes. Given month, day, and year se
 
 Demo: http://nickbusey.github.io/jQuery-Date-Select-Boxes-Plugin/
 
+Install: bower install jQueryDateSelectBoxes
+
 Usage: $().dateSelectBoxes({
 	monthElement: $('#birthMonth'),
 	dayElement: $('#birthDay'),
