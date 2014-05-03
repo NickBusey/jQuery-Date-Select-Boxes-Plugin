@@ -1,3 +1,5 @@
+Version: 1.0.0
+
 A simple way to implement smart date select boxes. Given month, day, and year select boxes, this plugin will automatically populate the day select box with the proper amount of days for a given year and month combination, taking leap years into account.
 
 Demo: http://nickbusey.github.io/jQuery-Date-Select-Boxes-Plugin/

@@ -9,6 +9,7 @@
 	span { margin: 2em; border:solid #ccc 1px; padding: 1em; }
 	-->
 	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 </head>
 <body>
 	<h1>jQuery Date Select Boxes Demo</h1>
@@ -17,7 +18,7 @@
 	<a href="https://github.com/NickABusey/jQuery-Date-Select-Boxes-Plugin">github</a>
 	<h2>Default Behavior</h2>
 	<span>
-		<select id="birthMonth" name="birthMonth">
+		<select id="month" name="month">
 		<option label="January" value="1">January</option>
 		<option label="February" value="2">February</option>
 		<option label="March" value="3">March</option>
@@ -31,7 +32,7 @@
 		<option label="November" value="11">November</option>
 		<option label="December" value="12">December</option>
 		</select> 
-		<select id="birthDay" name="birthDay">
+		<select id="day" name="day">
 		<option value="1">1</option>
 		<option value="2">2</option>
 		<option value="3">3</option>
@@ -64,7 +65,7 @@
 		<option value="30">30</option>
 		<option value="31">31</option>
 		</select> 
-		<select id="birthYear" name="birthYear">
+		<select id="year" name="year">
 		<option label="2010" value="2010">2010</option>
 		<option label="2009" value="2009">2009</option>
 		<option label="2008" value="2008">2008</option>
@@ -170,7 +171,7 @@
 	</span>
 	<h2>With optional label</h2>
 	<span>
-		<select id="birthMonth2" name="birthMonth">
+		<select id="month2" name="month">
 		<option label="month" selected="selected">month</option>
 		<option label="January" value="1">January</option>
 		<option label="February" value="2">February</option>
@@ -185,7 +186,7 @@
 		<option label="November" value="11">November</option>
 		<option label="December" value="12">December</option>
 		</select> 
-		<select id="birthDay2" name="birthDay"> 
+		<select id="day2" name="day"> 
 		<option label="day" selected="selected">day</option>
 		<option value="1">1</option>
 		<option value="2">2</option>
@@ -219,7 +220,7 @@
 		<option value="30">30</option>
 		<option value="31">31</option>
 		</select> 
-		<select id="birthYear2" name="birthYear"> 
+		<select id="year2" name="year"> 
 		<option label="year" selected="selected">year</option>
 		<option label="2010" value="2010">2010</option>
 		<option label="2009" value="2009">2009</option>
@@ -324,12 +325,45 @@
 		<option label="1910" value="1910">1910</option>
 		</select> 
 	</span>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-	<script src="dateSelectBoxes.js"></script>
+	<h2>Generated Tags</h2>
+	<span>
+		<select id="month3" name="month"></select>
+		<select id="day3" name="day"></select>
+		<select id="year3" name="year"></select>
+	</span>
+	<h2>Generated Tags with Labels</h2>
+	<span>
+		<select id="month4" name="month"></select>
+		<select id="day4" name="day"></select>
+		<select id="year4" name="year"></select>
+	</span>
+	<script src="jquery.dateSelectBoxes.js"></script>
 	<script type="text/javascript">// <![CDATA[
 	$().ready(function () { 
-		$().dateSelectBoxes($('#birthMonth'),$('#birthDay'),$('#birthYear'));
-		$().dateSelectBoxes($('#birthMonth2'),$('#birthDay2'),$('#birthYear2'),true);
+		$().dateSelectBoxes({
+			monthElement: $('#month'),
+			dayElement: $('#day'),
+			yearElement: $('#year')
+		});
+		$().dateSelectBoxes({
+			monthElement: $('#month2'),
+			dayElement: $('#day2'),
+			yearElement: $('#year2'),
+			keepLabels: true
+		});
+		$().dateSelectBoxes({
+			monthElement: $('#month3'),
+			dayElement: $('#day3'),
+			yearElement: $('#year3'),
+			generateOptions: true
+		});
+		$().dateSelectBoxes({
+			monthElement: $('#month4'),
+			dayElement: $('#day4'),
+			yearElement: $('#year4'),
+			generateOptions: true,
+			keepLabels: true
+		});
 	});
 	// ]]&gt;</script>
 </body>
