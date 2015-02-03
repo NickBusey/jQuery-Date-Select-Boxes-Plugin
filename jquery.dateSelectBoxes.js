@@ -7,7 +7,7 @@
  * Version 2.2.4
  * Demo: http://www.texotela.co.uk/code/jquery/select/
  *
- * $LastChangedDate: 2009-02-08 00:28:12 +0000 (Sun, 08 Feb 2009) $ 
+ * $LastChangedDate: 2009-02-08 00:28:12 +0000 (Sun, 08 Feb 2009) $
  * $Rev: 6185 $
  *
  */
@@ -20,7 +20,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
  *
  * Version 2.0.0
  * Demo: http://nickabusey.com/jquery-date-select-boxes-plugin/
- * 
+ *
  */
 (function(jQuery)
 	{
@@ -43,16 +43,16 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 				for (var ii=1;ii<=31;ii++) {
 					allDays[ii]=ii;
 				}
-				
+
 				if (settings.generateOptions) {
-					var years = [];
+					var years = '';
 					if (settings.yearLabel && settings.keepLabels) {
-						years.push(settings.yearLabel)
+                        years += '<option value="'+settings.yearLabel+'">'+ settings.yearLabel+'</option>';
 					}
 					for (var ii=settings.yearMax;ii>=settings.yearMin;ii--) {
-						years.push(ii);
+                        years += '<option value="'+ii+'">'+ ii+'</option>';
 					}
-					settings.yearElement.addOption(years, false);
+                    settings.yearElement.append(years, false);
 
 					var months = {
 						1:'January',
